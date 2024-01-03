@@ -11,7 +11,9 @@ const { concatenateStrings,
     encodeToRot13,
     extractEmails} = require("./src/01-strings-tasks");
 
-    const {getAverage,getAngleBetweenVectors} = require('./src/02-numbers-tasks')
+    const {getAverage,
+        getAngleBetweenVectors,toNumber,
+    } = require('./src/02-numbers-tasks')
 
 console.log(concatenateStrings("","bb"))
 console.log(getStringLength("aaaaa"))
@@ -28,3 +30,4 @@ console.log(extractEmails('angus.young@gmail.com;brian.johnson@hotmail.com;bon.s
 /*console.log(getCardId(['A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣','A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦','A♥','2♥','3♥','4♥','5♥','6♥','7♥','8♥','9♥','10♥','J♥','Q♥','K♥','A♠','2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠']))*/
 console.log(getAverage(-3,3))
 console.log(getAngleBetweenVectors(1,0,0,1))
+console.log(toNumber(null,0))
