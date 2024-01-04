@@ -12,8 +12,8 @@ const { concatenateStrings,
     extractEmails} = require("./src/01-strings-tasks");
 
     const {getAverage,
-        getAngleBetweenVectors,toNumber,
-    } = require('./src/02-numbers-tasks')
+        getAngleBetweenVectors,toNumber} = require('./src/02-numbers-tasks')
+    const{getIdentityMatrix}=require('./src/03-arrays-tasks')
 
 console.log(concatenateStrings("","bb"))
 console.log(getStringLength("aaaaa"))
@@ -31,3 +31,5 @@ console.log(extractEmails('angus.young@gmail.com;brian.johnson@hotmail.com;bon.s
 console.log(getAverage(-3,3))
 console.log(getAngleBetweenVectors(1,0,0,1))
 console.log(toNumber(null,0))
+console.log(getIdentityMatrix(5))
+
