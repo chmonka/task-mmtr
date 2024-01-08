@@ -34,9 +34,8 @@ function findElement(arr, value) {
  *    2 => [ 1, 3 ]
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
-function generateOdds(len) {
-
-  return Array.from({length:len},(item))
+function generateOdds(/* len */) {
+  throw new Error('Not implemented');
   
   // let result = [];
   // for (let i = 1; result.length < len; i += 2) {
@@ -439,27 +438,11 @@ function toStringList(arr) {
  */
 function sortCitiesArray(arr) {
   arr.sort((a, b) => {
-    if (a.country > b.country) {
-      return 1;
-    }
-    if (a.country === b.country) {
-      return 0;
-    }
-    if (a.country < b.country) {
-      return -1;
-    }
+    return a.country.localeCompare(b.country) 
   });
   return arr.sort((a, b) => {
     if (a.country == b.country) {
-      if (a.city > b.city) {
-        return 1;
-      }
-      if (a.city === b.city) {
-        return 0;
-      }
-      if (a.city < b.city) {
-        return -1;
-      }
+      return a.city.localeCompare(b.city) 
     }
   });
 }
