@@ -1,7 +1,14 @@
-let currentDate = new Date();
-console.log(currentDate.getFullYear());
-console.log(currentDate.getMonth());
-console.log(currentDate.getDate());
-console.log(currentDate.getHours());
-console.log(currentDate.getMinutes());
-console.log(currentDate.getSeconds());
+
+function getDigitalRoot(num) {
+    let sum = num;
+    while (sum > 9) {
+      let arraySplit = sum.toString().split('').map((elem) => {
+        return Number.parseInt(elem);
+      });
+      sum = arraySplit.reduce((sum, elem) => sum + elem, 0);
+    }
+    return sum;
+  }
+  
+
+  console.log(getDigitalRoot(123456999))

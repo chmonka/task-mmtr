@@ -174,10 +174,10 @@ function isInsideCircle(/* circle, point */) {
  *   'entente' => null
  */
 function findFirstSingleChar(/*str*/) {
-//  let array = str.split('')
-//   for(let word of array){
+  //  let array = str.split('')
+  //   for(let word of array){
 
-//  }
+  //  }
   throw new Error('Not implemented');
 }
 
@@ -286,19 +286,15 @@ function isCreditCardNumber(/*ccn */) {
  *   10000 ( 1+0+0+0+0 = 1 ) => 1
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
-function getDigitalRoot( num ) {
-  let arraySplit = num.toString().split('').map(elem => {return Number.parseInt(elem)});
-  let sum = 0;
-  for(let i = 0; i < arraySplit.length; i++){
-    sum += arraySplit[i];
+function getDigitalRoot(num) {
+  let sum = num;
+  while (sum > 9) {
+    let arraySplit = sum.toString().split('').map((elem) => {
+      return Number.parseInt(elem);
+    });
+    sum = arraySplit.reduce((sum, elem) => sum + elem, 0);
   }
-  let sumCount = 0;
-  if (sum > 9) {
-    sumCount = sum.toString().split('').reduce((sum, value) => sum + Number(value), 0);
-  } else {
-    sumCount = sum;
-  }
-  return sumCount;
+  return sum;
 }
 
 /**
@@ -346,8 +342,8 @@ function isBracketsBalanced(/* str */) {
  *    365, 4  => '11231'
  *    365, 10 => '365'
  */
-function toNaryString(num, n ) {
-  return num.toString(n)
+function toNaryString(num, n) {
+  return num.toString(n);
 }
 
 /**
